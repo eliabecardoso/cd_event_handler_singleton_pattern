@@ -1,11 +1,10 @@
 const eventEmitter = new (require('events')).EventEmitter()
-const { logger } = require('logger')(module)
 
 const EventHandler = function () {
   this.addListener = function (label, listener) {
     const newListener = eventEmitter.listeners(label).find(fnL => (fnL === listener))
     if (!newListener) {
-      logger.info('[ADHESION EVENTHANDLER] Adding new listener for: ', label)
+      console.info('[ADHESION EVENTHANDLER] Adding new listener for: ', label)
       eventEmitter.on(label, listener)
     }
     return this
