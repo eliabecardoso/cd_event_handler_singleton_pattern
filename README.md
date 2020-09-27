@@ -1,2 +1,3 @@
-# patterns
-Code box - Design Patterns
+#### #CodeDrops - Design Patterns - Singleton & Class Instance
+
+
